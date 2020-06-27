@@ -18,7 +18,7 @@ phases:
       - echo Building the Docker image...
       - mvn clean package -Dmaven.test.skip=true
       - docker build -t $IMAGE_REPO_NAME:$IMAGE_TAG .
-      - COMMITID=`echo $CODEBUILD_BUILD_ID | cut -d '-' -f1,9`
+      - COMMITID=`echo $CODEBUILD_BUILD_ID | cut -d ':' -f2 | cut -d '-' -f1
       - echo $CODEBUILD_BUILD_ID
       - echo $COMMITID
       - docker tag $IMAGE_REPO_NAME:$IMAGE_TAG $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$COMMITID
