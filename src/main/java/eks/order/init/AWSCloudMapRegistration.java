@@ -16,7 +16,6 @@ import org.springframework.stereotype.Component;
 import java.net.InetAddress;
 import java.util.UUID;
 
-@Component
 public class AWSCloudMapRegistration implements CommandLineRunner {
 
     private final Logger log = LoggerFactory.getLogger(AWSCloudMapRegistration.class);
