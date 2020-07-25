@@ -23,7 +23,7 @@ public class OrderController {
     @Autowired
     private OrderService orderService;
 
-    @GetMapping("/eks/order/get/{orderId}")
+    @GetMapping("/order/get/{orderId}")
     public OrderVO getOrder(@PathVariable Long orderId) {
         LOGGER.info("getOrder - {}", orderId);
 
@@ -43,7 +43,7 @@ public class OrderController {
         return orderVO;
     }
 
-    @GetMapping("/eks/order/list")
+    @GetMapping("/order/list")
     public List<Order> listOrders() {
         LOGGER.info("listOrders");
 
@@ -51,7 +51,7 @@ public class OrderController {
         return orders;
     }
 
-    @PostMapping("/eks/order/save")
+    @PostMapping("/order/save")
     public void saveOrder(@RequestBody @NotNull Order order) {
 
         LOGGER.info("saveOrder - {}", order.getOrderId());
