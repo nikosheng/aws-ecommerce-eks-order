@@ -21,7 +21,7 @@
         <java.version>1.8</java.version>
         <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
         <project.docker.version>latest</project.docker.version>
-        <project.name>ecs-order</project.name>
+        <project.name>eks-order</project.name>
     </properties>
 
 
