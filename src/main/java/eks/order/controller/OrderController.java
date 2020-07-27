@@ -32,7 +32,7 @@ public class OrderController {
         try {
             orderVO = OrderVO.OrderVOBuilder.newBuilder()
                      .tag("eks-order")
-                     .version("version-2")
+                     .version("version-1")
                      .ip(InetAddress.getLocalHost().getHostAddress())
                      .orderId(order.getOrderId())
                      .customerId(order.getCustomerId())
